@@ -1,0 +1,27 @@
+--TestNG        : Testing Framework. It is advanced version of JUnit
+--Annotations   : Multiple Before and After Annotations
+                    -@BeforeSuite   @AfterSuite
+                    -@BeforeGroups  @AfterGroups
+                    -@BeforeClass   @AfterClass
+                    -@BeforeMethod  @AfterMethod
+
+-@Test          : Mark a method as a Test Case. It creates test cases and let us run the  cases.
+-@Ignore        : Skip a test case
+
+***Assertions:
+-Hard Assertion : Stops the test execution if the Assertion line fails
+*Soft Assertion : Continues to the test execution even if the Assertion line fails/
+To use soft assertion we have to create softAssert object.
+SoftAssert softassert = new SoftAssert();
+
+softassert.
+
+
+
+--------------------------------------------------
+----------POM (Page Object Model) ----------------
+--------------------------------------------------
+
+*POM makes it possible to reuse the objects, classes, methods, data etc. So testers do less work.
+    We just create one and use multiple times
+*A better design makes the test execution time faster.
