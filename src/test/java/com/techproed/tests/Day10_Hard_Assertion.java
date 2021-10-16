@@ -1,4 +1,4 @@
-package com.techproed.test;
+package com.techproed.tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

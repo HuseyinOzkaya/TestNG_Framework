@@ -1,4 +1,4 @@
-package com.techproed.test;
+package com.techproed.tests;
 
 import com.techproed.utilities.ConfigReader;
 import com.techproed.utilities.Driver;

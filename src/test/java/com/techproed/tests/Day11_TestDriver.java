@@ -1,7 +1,6 @@
-package com.techproed.test;
+package com.techproed.tests;
 
 import com.techproed.utilities.Driver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
