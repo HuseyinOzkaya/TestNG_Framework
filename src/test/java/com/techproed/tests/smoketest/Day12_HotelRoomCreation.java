@@ -6,6 +6,8 @@ import com.techproed.pages.LoginPage;
 import com.techproed.utilities.ConfigReader;
 import com.techproed.utilities.Driver;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -71,9 +73,12 @@ public class Day12_HotelRoomCreation {
         //Save
         hotelRoomsPage.saveRoom.click();
 
-        Thread.sleep(1000);
+        //Explicit Wait
+
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
+        WebElement popupMessageElement = wait.until(ExpectedConditions.visibilityOf(hotelRoomsPage.verify));
         //verify
-        Assert.assertTrue(hotelRoomsPage.verify.isDisplayed());
+        Assert.assertTrue(popupMessageElement.isDisplayed());
 
 
 
