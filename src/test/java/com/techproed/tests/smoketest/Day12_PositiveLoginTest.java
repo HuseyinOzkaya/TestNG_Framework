@@ -37,5 +37,7 @@ public class Day12_PositiveLoginTest {
         boolean isLoggedIn = defaultPage.addUser.isDisplayed();
         Assert.assertTrue(isLoggedIn);
         //Assert.assertTrue(defaultPage.addUser.getText().contains("USER ADD"));
+
+        Driver.closeDriver();
     }
 }
