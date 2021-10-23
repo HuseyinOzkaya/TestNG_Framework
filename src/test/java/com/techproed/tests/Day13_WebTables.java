@@ -120,16 +120,6 @@ public class Day13_WebTables {
     }
 
 
-
-
-
-
-
-
-
-
-
-
     //Create a test method: printData(int row, int column); This method should print the given cell. Example: printData(2,3); should print 2nd row,3rd column
 
 
@@ -137,4 +127,5 @@ public class Day13_WebTables {
     public void tearDown(){
         Driver.closeDriver();
     }
+
 }

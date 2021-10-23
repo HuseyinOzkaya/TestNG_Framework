@@ -22,4 +22,10 @@ public class LoginPage {
     @FindBy(id ="btnSubmit")
     public WebElement submitButton;
 
+    @FindBy(id = "details-button")
+    public WebElement advancedLink;
+
+    @FindBy(id="proceed-link")
+    public WebElement advanceProceed;
+
 }
