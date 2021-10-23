@@ -13,6 +13,21 @@ public class DataProvider1 {
 
     //Create a method to get data from DataProvider
     //return type of the method is 2D array
+
+
+    /*Working with Data Provider
+1. Create a method that returns 2D object array
+2. Use @DataProvider annotation on the method
+3. Store the test data on this method
+---------------------------------
+4. Create a test method
+5. Use   @Test(dataProvider = "getData") annotation
+----------------------------------
+@DataProvider annotation will pass the data to the test classes
+*
+* */
+    //Create a method to get data from DataProvider
+    //return type of the method is 2D Object Array
 @DataProvider
     public Object[][] getData(){
         //manager Manager1!

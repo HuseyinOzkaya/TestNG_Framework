@@ -5,6 +5,7 @@ import com.techproed.pages.LoginPage;
 import com.techproed.utilities.ConfigReader;
 import com.techproed.utilities.Driver;
 import com.techproed.utilities.ExcelUtil;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -102,6 +103,10 @@ public class Day15_LoginSmokeTest {
             loginPage.submitButton.click();
         }
 
+    }
+    @AfterMethod
+    public void tearDown(){
+        Driver.closeDriver();
     }
 
 

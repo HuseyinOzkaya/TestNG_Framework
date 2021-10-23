@@ -1,13 +1,15 @@
 package com.techproed.dataprovider;
 
+import com.techproed.pages.DefaultPage;
 import com.techproed.pages.LoginPage;
 import com.techproed.utilities.ConfigReader;
 import com.techproed.utilities.Driver;
 import com.techproed.utilities.ReusableMethods;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class DataProvide2 {
+public class DataProvider2 {
     /*
     * Test the login functionality with manager crendentials
     * */
@@ -25,6 +27,7 @@ public class DataProvide2 {
     }
 
     LoginPage loginPage;
+    DefaultPage defaultPage;
     public void setUp() {
         loginPage = new LoginPage();
         Driver.getDriver().get(ConfigReader.getProperty("app_qa_environment"));
@@ -45,6 +48,9 @@ public class DataProvide2 {
         loginPage.userName.sendKeys(managerID);
         loginPage.password.sendKeys(managerPass);
         loginPage.submitButton.click();
+        ReusableMethods.waitFor(1);
+        defaultPage = new DefaultPage();
+        Assert.assertTrue(defaultPage.addUser.getText().equals("ADD USER"));
 
 
 
