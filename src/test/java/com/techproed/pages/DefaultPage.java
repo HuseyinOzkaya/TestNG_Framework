@@ -37,5 +37,21 @@ public class DefaultPage {
     @FindBy(xpath = "//h3[@class='page-title']")
     public WebElement dateOnPage;
 
+    @FindBy(xpath = "//select[@name='datatable_ajax_length']")
+    public WebElement numberOfRecordsView;
+
+    @FindBy(xpath = "//a[@title='Next']")
+    public WebElement nextPageRecords;
+
+    @FindBy(xpath = "//div[@class='pagination-panel']/input")
+    public WebElement viewPageNumber;
+
+    @FindBy(id= "btnExportTable")
+    public WebElement downloadButton;
+
+    @FindBy(xpath = "//tbody//tr[1]//td[8]")
+    public WebElement firstHotel;
+
+
 
 }
