@@ -41,6 +41,8 @@ public class DataProvider3 {
 
     LoginPage loginPage;
     DefaultPage defaultPage;
+
+
     public void setUp() {
         loginPage = new LoginPage();
         Driver.getDriver().get(ConfigReader.getProperty("app_qa_environment"));

@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class DefaultPage {
     public DefaultPage(){
         //PageFactory.initElements initialize this page object
@@ -18,4 +20,22 @@ public class DefaultPage {
     public WebElement hotelManagementTab;
     @FindBy(partialLinkText = "Hotel Rooms")
     public WebElement hotelRoomsTab;
+    @FindBy(partialLinkText = "Hotel List")
+    public WebElement hotelList;
+    @FindBy(xpath = "//select[@name='lkpGroups']")
+    public WebElement selectHotelType; //Value=1 => Hotel Type2
+                                        //Value=2 => Hotel Type1
+    @FindBy(xpath = "//button[@class='btn btn-sm yellow filter-submit margin-bottom']")
+    public WebElement searchButton;
+
+    @FindBy(xpath="//tbody//tr//td[7]")
+    public List<WebElement> IDGroupCells;
+
+    @FindBy(xpath = "//*[.='Clear']")
+    public WebElement clearButton;
+
+    @FindBy(xpath = "//h3[@class='page-title']")
+    public WebElement dateOnPage;
+
+
 }
