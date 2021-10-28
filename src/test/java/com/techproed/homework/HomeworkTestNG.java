@@ -30,7 +30,7 @@ public class HomeworkTestNG {
     Select select;
 
 
-    @BeforeMethod
+
     public void setUp() {
         Driver.getDriver().get(ConfigReader.getProperty("app_qa_environment"));
         loginPage = new LoginPage();
@@ -50,6 +50,7 @@ public class HomeworkTestNG {
 
     @Test
     public void iDGroupTestSorting() {
+        setUp();
         ReusableMethods.waitFor(2);
         IDGroupCheck("2");
         IDGroupCheck("1");
@@ -100,7 +101,7 @@ public void viewRecordTest(){
 
         @Test //US10000
         public void checkDetailsPageTest(){
-            defaultPage.firstHotel.click();
+            defaultPage.firstHotelDetails.click();
             String currentWindowHandle = Driver.getDriver().getWindowHandle();
             String nextWindowHandle = windowHandle(currentWindowHandle);
 
@@ -110,7 +111,7 @@ public void viewRecordTest(){
 
     @Test //US10001
     public void changeHotelCodeTest(){
-        defaultPage.firstHotel.click();
+        defaultPage.firstHotelDetails.click();
         String currentWindowHandle = Driver.getDriver().getWindowHandle();
         String nextWindowHandle = windowHandle(currentWindowHandle);
         Driver.getDriver().switchTo().window(nextWindowHandle);
@@ -125,7 +126,7 @@ public void viewRecordTest(){
 
     @Test //US10002
     public void changePropertiesTabTest(){
-        defaultPage.firstHotel.click();
+        defaultPage.firstHotelDetails.click();
         String currentWindowHandle = Driver.getDriver().getWindowHandle();
         String nextWindowHandle = windowHandle(currentWindowHandle);
         Driver.getDriver().switchTo().window(nextWindowHandle);

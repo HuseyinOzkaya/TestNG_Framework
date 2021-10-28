@@ -50,7 +50,7 @@ public class DefaultPage {
     public WebElement downloadButton;
 
     @FindBy(xpath = "//tbody//tr[1]//td[8]")
-    public WebElement firstHotel;
+    public WebElement firstHotelDetails;
 
 
 
