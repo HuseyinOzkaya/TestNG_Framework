@@ -30,7 +30,7 @@ public class HomeworkTestNG {
     Select select;
 
 
-
+    @BeforeMethod
     public void setUp() {
         Driver.getDriver().get(ConfigReader.getProperty("app_qa_environment"));
         loginPage = new LoginPage();
@@ -50,7 +50,7 @@ public class HomeworkTestNG {
 
     @Test
     public void iDGroupTestSorting() {
-        setUp();
+
         ReusableMethods.waitFor(2);
         IDGroupCheck("2");
         IDGroupCheck("1");
