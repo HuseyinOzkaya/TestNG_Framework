@@ -6,6 +6,7 @@ import com.techproed.pages.MainPage;
 import com.techproed.utilities.ConfigReader;
 import com.techproed.utilities.Driver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 public class Day12_PositiveLoginTest {
@@ -38,6 +39,11 @@ public class Day12_PositiveLoginTest {
         Assert.assertTrue(isLoggedIn);
         //Assert.assertTrue(defaultPage.addUser.getText().contains("USER ADD"));
 
+        Driver.closeDriver();
+    }
+
+    @AfterMethod
+    public void tearDown(){
         Driver.closeDriver();
     }
 }

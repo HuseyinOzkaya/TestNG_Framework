@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name = "Caretta-Test-Suite">
+    <test name="smoke test">
+        <packages>
+            <package name="com.techproed.tests.smoketest"></package>
+        </packages>
+
+
+    </test>
+</suite>
+
+<!-- suite > test > packages > package -->

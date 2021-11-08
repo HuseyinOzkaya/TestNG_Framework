@@ -5,12 +5,12 @@ import com.techproed.pages.HotelRoomsPage;
 import com.techproed.pages.LoginPage;
 import com.techproed.utilities.ConfigReader;
 import com.techproed.utilities.Driver;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 public class Day12_HotelRoomCreation {
@@ -54,7 +54,14 @@ public class Day12_HotelRoomCreation {
         //Description
         hotelRoomsPage.description.sendKeys(faker.company().name());
         //Price
-        hotelRoomsPage.price.sendKeys(faker.number().digits(4));
+//        hotelRoomsPage.price.sendKeys(faker.number().digits(3));
+        //Price
+        hotelRoomsPage.price.sendKeys("700");// WAY 1
+//        Actions actions = new Actions(Driver.getDriver());//WAY 2
+//        Thread.sleep(2000);
+//        actions.dragAndDrop(source,target).build().perform();
+       // actions.dragAndDrop(hotelRoomsPage.price700,hotelRoomsPage.price).build().perform();
+
         //RoomType
         Select selectRoom = new Select(hotelRoomsPage.roomTypeDropdown);
         selectRoom.selectByVisibleText("King");
@@ -91,5 +98,10 @@ public class Day12_HotelRoomCreation {
 //Click Save
 //Verify the message: HotelRoom was inserted successfully
 //Click OK
+    }
+
+    @AfterMethod
+    public void tearDown(){
+        Driver.closeDriver();
     }
 }

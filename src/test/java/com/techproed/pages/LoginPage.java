@@ -28,4 +28,6 @@ public class LoginPage {
     @FindBy(id="proceed-link")
     public WebElement advanceProceed;
 
+    @FindBy(id = "divMessageResult")
+    public WebElement errorMessage;
 }
